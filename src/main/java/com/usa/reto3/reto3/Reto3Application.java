@@ -15,5 +15,4 @@ public class Reto3Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Reto3Application.class, args);
 	}
-
 }

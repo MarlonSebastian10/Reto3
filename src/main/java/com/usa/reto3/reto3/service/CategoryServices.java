@@ -25,9 +25,13 @@ public class CategoryServices {
     }
 
     public Category save (Category category){
-        if (category.getId() == null){
-            return categoryRepository.save(category);
-        } else {
+        if (category.getId() == null) {
+            if (category.getName().length() <= 45 && category.getDescription().length() <= 250) {
+                return categoryRepository.save(category);
+            } else {
+                return category;
+            }
+        }else{
             Optional<Category> categoryEncontrada = categoryRepository.getCategory(category.getId());
             if(categoryEncontrada.isEmpty()){
                 return categoryRepository.save(category);
