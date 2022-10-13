@@ -1,6 +1,6 @@
 package com.usa.reto3.reto3.repository;
 
-import com.usa.reto3.reto3.model.Admin;
+import com.usa.reto3.reto3.repository.MessageCRUDRepository;
 import com.usa.reto3.reto3.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
